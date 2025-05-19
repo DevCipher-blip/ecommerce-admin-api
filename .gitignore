@@ -19,3 +19,12 @@ alembic/versions/*.pyc
 
 # Mac/Linux file system files
 *.~undo-tree*
+
+# Local environments and generated files
+project_venv/
+node_modules/
+*.pyc
+.env.*
+!.env.example
+!.env.sample
+.DS_Store

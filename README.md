@@ -1,8 +1,10 @@
-# 🛒 E-commerce Admin API
+# E-commerce operations API
 
-A **FastAPI-based** backend system for managing products, inventory, and sales analytics for an e-commerce admin dashboard.
+## Inventory and sales share a data model
 
----
+Products, inventory records, inventory-change logs, and sales are separated into schema, model, CRUD, and router layers. The [entity diagram](ERD.png) is the quickest overview; follow a sale through [the sales CRUD module](app/crud/sales.py) to see how it affects stored state.
+
+Useful review cases include insufficient stock, concurrent sales, date-range summaries, and a rejected write that must leave inventory unchanged. The existing API tests are a starting point; a production capacity claim would need a chosen database, transaction review, and measured workloads.
 
 ## 🚀 Features
 
@@ -34,7 +36,7 @@ A **FastAPI-based** backend system for managing products, inventory, and sales a
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourname/ecom-admin-api.git
+git clone https://github.com/DevCipher-blip/ecommerce-admin-api.git
 cd ecom-admin-api
 ```
 
